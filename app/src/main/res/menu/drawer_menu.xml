@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home_id"
+            android:title="Home"
+            android:icon="@drawable/home_"
+            >
+        </item>
+        <item
+            android:id="@+id/account_id"
+            android:title="Account"
+            android:icon="@drawable/account"
+            >
+        </item>
+        <item
+            android:id="@+id/order_id"
+            android:title="My Orders"
+            android:icon="@drawable/my_orders_icon"
+            >
+        </item>
+        <item
+            android:id="@+id/bill_id"
+            android:title="Bills"
+            android:icon="@drawable/bills"
+            >
+        </item>
+        <item
+            android:id="@+id/renew_id"
+            android:title="Renew"
+            android:icon="@drawable/renew_"
+            >
+        </item>
+        <item
+            android:id="@+id/logout_id"
+            android:title="Logout"
+            android:icon="@drawable/logout_icon"
+            >
+        </item>
+    </group>
+
+    <item android:title="Features">
+        <menu>
+            <item
+                android:id="@+id/askDytila_id"
+                android:title="Ask Dytila"
+                android:icon="@drawable/askdytila1"
+                >
+            </item>
+            <item
+                android:id="@+id/slabs_id"
+                android:title="Strength Labs"
+                android:icon="@drawable/slabs_"
+                >
+            </item>
+        </menu>
+    </item>
+
+    <item android:title="Social">
+        <menu>
+            <item
+                android:id="@+id/facebook_id"
+                android:title="Facebook"
+                android:icon="@drawable/facebook_"
+                >
+            </item>
+            <item
+                android:id="@+id/instagram_id"
+                android:title="Instagram"
+                android:icon="@drawable/instagram"
+                >
+            </item>
+        </menu>
+    </item>
+
+    <item android:title="Extras">
+        <menu>
+            <item
+                android:id="@+id/aboutus_id"
+                android:title="About Us"
+                android:icon="@drawable/about_us"
+                >
+            </item>
+        </menu>
+    </item>
+</menu>

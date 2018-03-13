@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardElevation="0dp"
+        card_view:cardCornerRadius="0dp"
+        android:layout_marginBottom="8dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/user_who_asked_avatarImg"
+                app:civ_border_width="1dp"
+                app:civ_border_color="#000000"
+                android:src="@drawable/avatar"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="username here"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/askedBy"
+                android:textColor="#ed000000"
+                android:textSize="15sp"
+                android:id="@+id/username_who_asked"
+                android:layout_toRightOf="@+id/user_who_asked_avatarImg"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="date here"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:id="@+id/date"
+                android:layout_toRightOf="@+id/user_who_asked_avatarImg"
+                android:layout_below="@+id/username_who_asked"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/user_who_asked_avatarImg"
+                android:id="@+id/divider"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider"
+                android:text="question here"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:id="@+id/question"
+                android:textSize="15sp"
+                android:textColor="#000"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

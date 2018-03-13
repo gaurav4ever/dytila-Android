@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#dcdcdc">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            card_view:contentPadding="10dp"
+            card_view:contentPaddingLeft="30dp"
+            card_view:contentPaddingRight="30dp"
+            android:layout_margin="5dp"
+            card_view:cardElevation="0dp"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/view3"
+            >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Month Meal Pack Order Details"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="16dp"
+                android:id="@+id/order_details_header"
+                android:textColor="#cc0000"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="160dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Id"
+                android:id="@+id/order_id_head"
+                android:layout_marginTop="60dp"
+                android:textSize="10dp"
+                android:textColor="#000"/>
+            <TextView
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:text="text"
+                android:id="@+id/order_id"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="80dp"
+                android:textSize="10dp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meal Name"
+                android:id="@+id/meal_name_head"
+                android:layout_marginTop="100dp"
+                android:textSize="10dp"
+                android:textColor="#000"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="text"
+                android:id="@+id/meal_name"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="120dp"
+                android:textSize="10dp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Meal Freq."
+                android:id="@+id/Tmeal_freq_header"
+                android:layout_marginTop="140dp"
+                android:textSize="10dp"
+                android:textColor="#000"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="text"
+                android:id="@+id/Tmeal_freq"
+                android:layout_marginTop="140dp"
+                android:layout_marginLeft="120dp"
+                android:textSize="10dp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meal Freq. remaining"
+                android:id="@+id/meal_freq_header"
+                android:layout_marginTop="180dp"
+                android:textSize="10dp"
+                android:textColor="#000"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="text"
+                android:id="@+id/meal_freq"
+                android:layout_marginTop="180dp"
+                android:layout_marginLeft="120dp"
+                android:textSize="10dp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick Up Timing"
+                android:id="@+id/timing_header"
+                android:layout_marginTop="220dp"
+                android:textSize="10dp"
+                android:textColor="#000"
+                />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="text"
+                android:id="@+id/timing"
+                android:layout_marginTop="220dp"
+                android:layout_marginLeft="120dp"
+                android:textSize="10dp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Specification"
+                android:layout_marginTop="260dp"
+                android:id="@+id/spec_header"
+                android:textSize="10dp"
+                android:textColor="#000"
+                android:layout_marginBottom="20dp" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="text"
+                android:id="@+id/spec"
+                android:layout_marginTop="260dp"
+                android:layout_marginLeft="120dp"
+                android:textSize="10dp"
+                android:gravity="center"/>
+
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/notFoundLayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NO MONTHLY ORDERS FOUND"
+                android:textStyle="bold"
+                android:layout_margin="20dp"
+                android:textColor="#000"
+                android:id="@+id/t1"
+                android:textSize="18sp"/>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/lonley"
+                android:id="@+id/img"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/t1"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Order Now"
+                android:id="@+id/orderButton"
+                android:textColor="#fff"
+                android:layout_margin="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/shape"
+                android:layout_below="@+id/img"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dcdcdc">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardElevation="0dp"
+        android:layout_marginBottom="0.5dp"
+        android:layout_marginRight="0.5dp"
+        card_view:cardBackgroundColor="#fff"
+        android:id="@+id/view"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/mealImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:fitsSystemWindows="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/default_img1">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/mealName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Meal name"
+                android:textColor="#000"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_below="@+id/mealImage"
+                android:textSize="12sp" >
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Program Name"
+                android:gravity="center"
+                android:id="@+id/program"
+                android:textSize="10sp"
+                android:layout_below="@+id/mealName"
+                android:layout_marginTop="1dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:id="@+id/price"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#ab0303"
+                android:layout_below="@+id/program"
+                android:layout_marginTop="5dp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>

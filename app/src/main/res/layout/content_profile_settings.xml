@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_screen2"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.Dytila.gauravpc.dytilasp1.profile_settings"
+    tools:showIn="@layout/activity_profile_settings">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a3000000"
+        android:padding="10dp">
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/changeEmailLayout"
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/goback6"
+                        android:id="@+id/goback1"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Current Email"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:id="@+id/current_email"
+                        android:textSize="25sp"
+                        android:textColor="#fff"
+                        android:layout_marginTop="40dp"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:textSize="14sp"
+                        android:hint="NEW EMAIL ADDRESS"
+                        android:textColor="#fff"
+                        android:textColorHint="#fff"
+                        android:id="@+id/new_email"
+                        android:layout_marginTop="50dp"
+                        android:inputType="textEmailAddress"
+                        android:layout_below="@+id/current_email"
+                        android:layout_centerHorizontal="true" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="#c3ab0303"
+                        android:textColor="#fff"
+                        android:text="Save"
+                        android:layout_marginTop="50dp"
+                        android:id="@+id/save_button1"
+                        android:textSize="14sp"
+                        android:layout_below="@+id/new_email"
+                        android:layout_centerHorizontal="true"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/changeMobileLayout"
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/goback6"
+                        android:id="@+id/goback2"/>
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Current Mobile Number"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:id="@+id/current_mobile"
+                        android:textSize="20sp"
+                        android:layout_marginTop="40dp"
+                        android:textColor="#fff"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:textSize="14sp"
+                        android:hint="NEW MOBILE NUMBER"
+                        android:textColor="#fff"
+                        android:textColorHint="#fff"
+                        android:inputType="number"
+                        android:id="@+id/new_mobile"
+                        android:layout_below="@+id/current_mobile"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="#c3ab0303"
+                        android:textColor="#fff"
+                        android:text="Save"
+                        android:layout_marginTop="50dp"
+                        android:id="@+id/save_button2"
+                        android:textSize="14sp"
+                        android:layout_below="@+id/new_mobile"
+                        android:layout_centerHorizontal="true"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/changeAddressLayout"
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/goback6"
+                        android:id="@+id/goback3"/>
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery Address"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:id="@+id/current_address"
+                        android:textSize="18sp"
+                        android:layout_marginTop="40dp"
+                        android:textColor="#fff"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:textSize="14sp"
+                        android:textColor="#fff"
+                        android:textColorHint="#fff"
+                        android:hint="DELIVERY ADDRESS"
+                        android:id="@+id/address"
+                        android:inputType="textEmailAddress"
+                        android:layout_below="@id/current_address"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="#c3ab0303"
+                        android:textColor="#fff"
+                        android:text="Save"
+                        android:layout_marginTop="50dp"
+                        android:id="@+id/save_button3"
+                        android:textSize="14sp"
+                        android:layout_below="@+id/address"
+                        android:layout_centerHorizontal="true"/>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

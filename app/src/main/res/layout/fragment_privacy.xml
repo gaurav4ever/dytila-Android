@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:id="@+id/privacyLayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="When do we collect information?"
+                android:id="@+id/ttextView5"
+                android:textColor="#ab0303"
+                android:textSize="18sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="How we protect your information"
+                android:id="@+id/ttextView10"
+                android:textColor="#ab0303"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/pterms1"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Do we use &apos;cookies&apos;?"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ttextView11"
+                android:textColor="#ab0303"
+                android:textSize="18sp"
+                android:layout_below="@+id/pterms2"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:id="@+id/pterms3"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/ttextView11"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="terms"
+                android:gravity="center"
+                android:id="@+id/pterms1"
+                android:textSize="12sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="#000000"
+                android:layout_below="@+id/ttextView5"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="text"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:id="@+id/pterms2"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/ttextView10"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="We use cookies to :"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ttextView12"
+                android:textSize="18sp"
+                android:layout_below="@+id/pterms3"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ab0303"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/pterms4"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/ttextView12"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

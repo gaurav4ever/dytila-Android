@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ab0303">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Placed Successfully"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:id="@+id/t1"/>
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/t1"
+            android:id="@+id/img"
+            android:src="@drawable/cool_icon"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order ID : "
+            android:id="@+id/order_id"
+            android:layout_below="@+id/img"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:padding="20dp"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/close"
+            android:text="CLOSE"
+            android:background="#fff"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/order_id"
+            android:textColor="#ab0303"
+            android:gravity="center"
+            android:padding="20dp"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+</LinearLayout>

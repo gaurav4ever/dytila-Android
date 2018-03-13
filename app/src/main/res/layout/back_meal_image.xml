@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:id="@+id/headerImage">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/goback6"
+                    android:id="@+id/goBackImage"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="Non-Veg Meals"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/t1"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="#dcdcdc"-->
+                    <!--android:text="Exotic Dishes"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:textSize="13sp"/>-->
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

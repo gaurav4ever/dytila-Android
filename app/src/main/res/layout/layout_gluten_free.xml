@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ab0303"
+    android:padding="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:id="@+id/scrollView"
+            android:background="#fff">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="What is Gluten ? "
+                    android:id="@+id/t1"
+                    android:textSize="15sp"
+                    android:textColor="#000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="about gluten"
+                    android:id="@+id/ans1"
+                    android:textSize="15sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/t1" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/ans1"
+                    android:id="@+id/divider1"
+                    android:background="@android:color/darker_gray"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="What are the disadvantages of Gluten ?"
+                    android:id="@+id/t3"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/divider1"
+                    android:textColor="#000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="about gluten disadvantages"
+                    android:id="@+id/ans2"
+                    android:textSize="15sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/t3" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/ans2"
+                    android:id="@+id/divider2"
+                    android:background="@android:color/darker_gray"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="What is Gluten Free ?"
+                    android:id="@+id/t5"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/divider2"
+                    android:textColor="#000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="about gluten free"
+                    android:id="@+id/ans3"
+                    android:textSize="15sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/t5" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/ans3"
+                    android:id="@+id/divider3"
+                    android:background="@android:color/darker_gray"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How Dytila provides Gluten Free Meals ?"
+                    android:id="@+id/t6"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/divider3"
+                    android:textColor="#000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="about How Dytila provides Gluten Free Meals"
+                    android:id="@+id/ans4"
+                    android:textSize="15sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/t6" />
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scrollView"
+            android:textColor="#fff"
+            android:background="#ab0303"
+            android:text="CLOSE"
+            android:id="@+id/close"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+</LinearLayout>

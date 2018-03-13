@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ab0303"
+    android:padding="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/options"
+            android:weightSum="1">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/remove"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:layout_weight="0.5">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/removeImage"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/delete_icon"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Remove Avatar"
+                    android:layout_below="@+id/removeImage"
+                    android:textColor="#000"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    android:gravity="center"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/change"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:layout_weight="0.5">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/changeImage"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/change_avatar"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Change Avatar"
+                    android:textColor="#000"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/changeImage" />
+            </RelativeLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CLOSE"
+            android:textColor="#fff"
+            android:background="#ab0303"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:id="@+id/closeText"
+            android:textStyle="bold"
+            android:layout_below="@+id/options"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+</LinearLayout>

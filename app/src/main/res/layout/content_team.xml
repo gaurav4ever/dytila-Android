@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#dcdcdc"
+    tools:context="com.Dytila.gauravpc.dytilasp1.team"
+    tools:showIn="@layout/activity_team">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sauravLayout"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:padding="5dp"
+                    android:id="@+id/saurav"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/team_saurav"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:text="Saurav Sharma\nCEO"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:layout_alignRight="@+id/saurav"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@+id/sauravLayout"
+                android:id="@+id/akshayLayout"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Akshay Kudva\nCCO"
+                    android:textSize="18sp"
+                    android:layout_margin="10dp"
+                    android:textColor="#000"
+                    android:layout_alignRight="@+id/saurav"/>
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:padding="5dp"
+                    android:id="@+id/akshay"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/saurav"
+                    android:src="@drawable/team_kudva"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@+id/akshayLayout"
+                android:id="@+id/gauravLayout">
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:padding="5dp"
+                    android:id="@+id/gaurav"
+                    android:layout_margin="10dp"
+                    android:layout_below="@+id/akshay"
+                    android:src="@drawable/team_gaurav"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Gaurav Sharma\nCTO"
+                    android:textSize="18sp"
+                    android:layout_margin="10dp"
+                    android:textColor="#000"
+                    android:layout_alignRight="@+id/saurav"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Hey there! We are the team dytila. You might often hear about balancing your work and play. But you know what fuels all? FOOD! You are what you eat, eating clea is the first step in achieving fitness, and that's where we step in. We hope you will have a great experience with dytila :)"
+                android:layout_below="@+id/gauravLayout"
+                />
+
+        </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

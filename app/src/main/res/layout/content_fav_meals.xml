@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.Dytila.gauravpc.dytilasp1.FavMeals"
+    tools:showIn="@layout/activity_fav_meals">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/headerLayout"
+        android:background="#d30707">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/goback6"
+            android:id="@+id/goBackImage"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Favourite Meals"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@+id/goBackImage"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerLayout"
+        android:background="#efefef">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/notFoundLayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NO FAVOURITE MEALS YET"
+                android:textStyle="bold"
+                android:layout_margin="20dp"
+                android:textColor="#000"
+                android:id="@+id/t1"
+                android:textSize="18sp"/>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/lonley"
+                android:id="@+id/img"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/t1"/>
+        </RelativeLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:id="@+id/favMealsList"
+            android:layout_weight="1"
+            android:layout_below="@+id/header"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

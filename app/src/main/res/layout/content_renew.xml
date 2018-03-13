@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#efefef"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.Dytila.gauravpc.dytilasp1.renew"
+    tools:showIn="@layout/activity_renew">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Order Status"
+        android:id="@+id/order_status"
+        android:textSize="30sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/cross"
+        android:layout_margin="10dp"
+        android:src="@drawable/goback5" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Renew My Order"
+        android:id="@+id/renew_button"
+        android:background="@drawable/shape"
+        android:textColor="#fff"
+        android:layout_below="@+id/cross"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="40dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/renew_button"
+        android:background="@drawable/shape"
+        android:layout_marginLeft="40dp"
+        android:text="New Order"
+        android:textColor="#fff"
+        android:id="@+id/newOrder"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="40dp"/>
+</RelativeLayout>

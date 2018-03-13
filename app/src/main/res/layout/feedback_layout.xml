@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ab0303"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Love Dytila ?"
+            android:textColor="#000"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/t1"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/thankyou"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/t1"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/thankyou"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@+id/t1"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:padding="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:lines="8"
+            android:gravity="top|left"
+            android:maxLines="20"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:id="@+id/feedback_text"
+            android:hint="Please Give Your Feedback"
+            android:layout_below="@+id/t1"
+            android:background="#efefef"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ab0303"
+            android:text="Send Feedback"
+            android:textColor="#fff"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/feedback_text"
+            android:textSize="18sp"
+            android:id="@+id/send_feedback_button"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

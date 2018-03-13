@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#dcdcdc">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/notFoundLayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NO REGULAR ORDERS FOUND"
+                android:textStyle="bold"
+                android:layout_margin="20dp"
+                android:textColor="#000"
+                android:id="@+id/t1"
+                android:textSize="18sp"/>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/lonley"
+                android:id="@+id/img"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/t1"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Order Now"
+                android:id="@+id/orderButton"
+                android:textColor="#fff"
+                android:layout_margin="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/shape"
+                android:layout_below="@+id/img"/>
+        </RelativeLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:id="@+id/orderList"
+            android:layout_weight="1"
+            android:layout_below="@+id/header"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.Dytila.gauravpc.dytilasp1.activity2"
+    tools:showIn="@layout/activity_activity2"
+    android:background="@drawable/back_screen">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#72000000">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="30dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="DYTILA  NUTRITION"
+                    android:id="@+id/textView"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:singleLine="false"
+                    android:focusable="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:id="@+id/name"
+                    android:layout_below="@+id/textView"
+                    android:layout_marginTop="40dp">
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:padding="15dp"
+                        android:textSize="14sp"
+                        android:inputType="textPersonName"
+                        android:hint="FIRST NAME"
+                        android:textColor="#f1ffffff"
+                        android:textColorHint="#f1ffffff"
+                        android:ems="10"
+                        android:id="@+id/firstname"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:padding="15dp"
+                        android:textSize="14sp"
+                        android:layout_alignParentEnd="true"
+                        android:inputType="textPersonName"
+                        android:hint="LAST NAME"
+                        android:ems="10"
+                        android:textColorHint="#f1ffffff"
+                        android:textColor="#f1ffffff"
+                        android:id="@+id/lastname"
+                        android:layout_below="@+id/textView" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="15dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="15dp"
+                    android:hint="EMAIL ID"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:textColorHint="#f1ffffff"
+                    android:textColor="#f1ffffff"
+                    android:id="@+id/email"
+                    android:layout_below="@+id/name"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="15dp"
+                    android:inputType="phone"
+                    android:textColorHint="#f1ffffff"
+                    android:textColor="#f1ffffff"
+                    android:hint="MOBILE NUMBER"
+                    android:ems="10"
+                    android:id="@+id/mobile"
+                    android:layout_below="@+id/email"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="15dp"
+                    android:textSize="14sp"
+                    android:inputType="textPassword"
+                    android:hint="PASSWORD"
+                    android:ems="10"
+                    android:id="@+id/password"
+                    android:textColorHint="#f1ffffff"
+                    android:textColor="#f1ffffff"
+                    android:layout_below="@+id/mobile"
+                    android:layout_marginTop="15dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="15dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="15dp"
+                    android:inputType="textPassword"
+                    android:hint="CONFIRM PASSWORD"
+                    android:ems="10"
+                    android:id="@+id/repassword"
+                    android:textColorHint="#f1ffffff"
+                    android:textColor="#f1ffffff"
+                    android:layout_below="@+id/password"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/repassword"
+                    android:textSize="8sp"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#fff"
+                    android:id="@+id/t1"
+                    android:text="*PASSWORD MUST BE AT LEAST OF 5 CHARACTER."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#d3ffffff"
+                    android:layout_margin="25dp"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:text="By clicking REGISTER you are agreeing to the Terms Of Service and Privacy Policy."
+                    android:layout_below="@+id/t1"
+                    android:id="@+id/termsText"/>
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Register"
+                    android:id="@+id/registerButton"
+                    android:layout_below="@+id/termsText"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape"
+                    android:textColor="#f1ffffff" />
+
+            </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

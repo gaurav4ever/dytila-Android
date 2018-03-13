@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ab0303"
+    >
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_below="@+id/info1"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Meals are available 30min after order is placed.\n\n So, please select time 30min ahead of now."
+        android:background="#fff"
+        android:textColor="#ab0303"
+        android:padding="30dp"
+        android:textSize="12sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DONE"
+        android:textColor="#fff"
+        android:background="#ab0303"
+        android:padding="20dp"
+        android:id="@+id/timeTextView"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>

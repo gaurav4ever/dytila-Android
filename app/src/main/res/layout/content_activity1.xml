@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.Dytila.gauravpc.dytilasp1.activity1"
+    tools:showIn="@layout/activity_activity1"
+    android:background="@drawable/back_screen">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#72000000">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="30dp"
+            android:layout_centerInParent="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="DYTILA  NUTRITION"
+                android:id="@+id/textView"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:singleLine="false"
+                android:focusable="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:id="@+id/emailArea"
+                android:layout_below="@+id/textView"
+                android:layout_marginTop="50dp">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="0.1"
+                    android:padding="4dp"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/email_icon1"/>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:id="@+id/email"
+                    android:hint="EMAIL"
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:padding="15dp"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:id="@+id/passwordArea"
+                android:layout_below="@+id/emailArea"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="0.1"
+                    android:padding="3dp"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/password_icon"/>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:ems="10"
+                    android:padding="15dp"
+                    android:id="@+id/password"
+                    android:inputType="textPassword"
+                    android:textColor="#fff"
+                    android:textSize="14sp"
+                    android:textColorHint="#fff"
+                    android:hint="PASSWORD" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                android:layout_below="@+id/passwordArea"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/forgotPassword"
+                android:padding="5dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#d3ffffff"
+                android:layout_margin="20dp"
+                android:padding="10dp"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:text="By clicking LOGIN you are agreeing to the Terms Of Service and Privacy Policy."
+                android:layout_below="@+id/forgotPassword"
+                android:id="@+id/termsText"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log In"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/loginButton"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/shape"
+                android:textColor="#ffffff"
+                android:layout_below="@+id/termsText"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Register Here"
+                android:gravity="center"
+                android:id="@+id/register"
+                android:layout_marginTop="40dp"
+                android:layout_below="@+id/loginButton"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

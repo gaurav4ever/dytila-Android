@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">Dytila</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_activity1">Dytila</string>
+    <string name="title_activity_activity2">Dytila</string>
+    <string name="title_activity_activity3">Dytila</string>
+    <string name="title_activity_vegmeals">Veg Meals</string>
+    <string name="title_activity_nonvegmeals">Non-Veg Meals</string>
+    <string name="title_activity_egg">Egg Meals</string>
+    <string name="title_activity_shakes">Shakes</string>
+    <string name="title_activity_cheat">Cheat Meal</string>
+    <string name="drawer_open">drawer open</string>
+    <string name="drawer_close">drawer close</string>
+    <string name="title_activity_meal_handler">mealHandler</string>
+    <string name="title_activity_terms">Terms and Conditions</string>
+    <string name="title_activity_privacy">Privacy</string>
+    <string name="title_activity_bills">Bills</string>
+    <string name="title_activity_account">Account</string>
+    <string name="title_activity_renew">renew</string>
+    <string name="title_activity_feedback">feedback</string>
+    <string name="title_activity_features">Dytila</string>
+    <string name="title_activity_calculator">Dytila Calculator</string>
+    <string name="title_activity_show_calculator">Dytila Calculators</string>
+    <string name="title_activity_change_password">change_password</string>
+    <string name="title_activity_profile">profile</string>
+    <string name="title_activity_profile_settings">profile_settings</string>
+    <string name="title_activity_dytilab">Dytila Business</string>
+    <string name="title_activity_about_us">about_us</string>
+    <string name="title_activity_team">team</string>
+    <string name="title_activity_details">details</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="title_activity_slabs">slabs</string>
+    <string name="title_activity_ask_dytila_main">AskDytila Feed</string>
+    <string name="ageText">20</string>
+    <string name="weightText">75</string>
+    <string name="heightText">6</string>
+    <string name="title_activity_welcome1">welcome1</string>
+    <string name="title_activity_welcome2">welcome2</string>
+    <string name="title_activity_welcome3">welcome3</string>
+    <string name="title_activity_welcome_screens">welcome_screens</string>
+    <string name="title_activity_checkout">checkout</string>
+    <string-array name="exerciselevels">
+        <item>No Exercise</item>
+        <item>Light Exercise(1-3 days a week)</item>
+        <item>Moderate Exercise(3-5 days a week)</item>
+        <item>Heavy Exercise(6-7 days a week)</item>
+        <item>Very Heavy Exercise (twice a day)</item>
+    </string-array>
+    <string-array name="size">
+        <item>S (39)</item>
+        <item>M (40)</item>
+        <item>L (42)</item>
+        <item>XL (44)</item>
+        <item>XXL (46)</item>
+    </string-array>
+    <string-array name="mealFreqOptions">
+        <item>28</item>
+        <item>20</item>
+        <item>15</item>
+        <item>10</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="timingOptions">
+        <item>By Mobile</item>
+        <item>11 am</item>
+        <item>12 pm</item>
+        <item>2 pm</item>
+        <item>4 pm</item>
+        <item>6 pm</item>
+        <item>8 pm</item>
+        <item>9 pm</item>
+        <item>10 pm</item>
+    </string-array>
+    <string name="title_activity_partners">Partners</string>
+    <string name="title_activity_motivation">Motivation</string>
+    <string name="title_activity_monthplan">Month Plan</string>
+    <string name="title_activity_order_now">Order Now</string>
+    <string name="title_activity_workouts">Workouts</string>
+    <string name="title_activity_places_gyms">Fitness Places Nearby</string>
+    <string name="title_activity_places_kitchens">Dytila Kitchens</string>
+    <string name="title_activity_ask_dytila_que">Questions</string>
+    <string name="title_activity_ask_dytila_ask">Ask Question</string>
+    <string name="title_activity_as_kdytila_seemore"> Feed</string>
+    <string name="title_activity_ask_dytila_all_answers">AskDytila_allAnswers</string>
+    <string name="title_activity_ask_dytila_new_ans">askDytila_newAns</string>
+    <string name="title_activity_regular_order_user">regular_order_user</string>
+    <string name="title_activity_ask_dytila_m_ans">AskDytila_mAns</string>
+    <string name="title_activity_ask_dytila_m_ques">askDytila_mQues</string>
+    <string name="title_activity_ask_dytila_m_que_ans">AskDytila_mQueAns</string>
+    <string name="title_activity_change_avatar">changeAvatar</string>
+    <string name="title_activity_order_details">My Orders</string>
+    <string name="title_activity_ask_dytila_m_ques_ans">Ask_dytila_m_ques_ans</string>
+    <string name="title_activity_juices">Juices</string>
+    <string name="title_activity_forgot_password">Forgot Password</string>
+    <string name="title_activity_custom_meal_plans">Custom Meal Plans</string>
+    <string name="title_activity_custom_meal_plan_detail">customMealPlanDetail</string>
+    <string name="title_activity_how_to__order__meal">How_to_Order_Meal</string>
+    <string name="title_activity_fav_meals">FavMeals</string>
+</resources>

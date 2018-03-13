@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.Dytila.gauravpc.dytilasp1"
+    android:versionCode="1">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.example.gauravpc.maps.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permisson.READ_GSERVICES" />
+
+    <!-- <uses-feature -->
+    <!-- android:glEsVersion="0x00020000" -->
+    <!-- android:required="true"/> -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/di"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCtYElp6VK1zSi2J8dRBGdCkTbOvSzQHrY" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.activity1"
+            android:label="@string/title_activity_activity1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.activity2"
+            android:label="@string/title_activity_activity2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.vegmeals"
+            android:label="@string/title_activity_vegmeals"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.nonvegmeals"
+            android:label="@string/title_activity_nonvegmeals"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.egg"
+            android:label="@string/title_activity_egg"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.shakes"
+            android:label="@string/title_activity_shakes"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.cheat"
+            android:label="@string/title_activity_cheat"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.mealHandler"
+            android:label="@string/title_activity_meal_handler"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.terms"
+            android:label="@string/title_activity_terms"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.bills"
+            android:label="@string/title_activity_bills"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.account"
+            android:label="@string/title_activity_account"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.renew"
+            android:label="@string/title_activity_renew"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.feedback"
+            android:label="@string/title_activity_feedback"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.features"
+            android:label="@string/title_activity_features"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.calculator"
+            android:label="@string/title_activity_calculator"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.showCalculator"
+            android:label="@string/title_activity_show_calculator"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.change_password"
+            android:label="@string/title_activity_change_password"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.profile_settings"
+            android:label="@string/title_activity_profile_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.dytilab"
+            android:label="@string/title_activity_dytilab"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.about_us"
+            android:label="@string/title_activity_about_us"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.team"
+            android:label="@string/title_activity_team"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.slabs"
+            android:label="@string/title_activity_slabs"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.askDytilaMain"
+            android:label="@string/title_activity_ask_dytila_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.welcome_screens"
+            android:label="@string/title_activity_welcome_screens"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.checkout"
+            android:label="@string/title_activity_checkout"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.partners"
+            android:label="@string/title_activity_partners"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.order_now"
+            android:label="@string/title_activity_order_now"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.places_kitchens"
+            android:label="@string/title_activity_places_kitchens"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.askDytila_que"
+            android:label="@string/title_activity_ask_dytila_que"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.askDytila_ask"
+            android:label="@string/title_activity_ask_dytila_ask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.asKDytila_seemore"
+            android:label="@string/title_activity_as_kdytila_seemore"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.AskDytila_allAnswers"
+            android:label="@string/title_activity_ask_dytila_all_answers"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.askDytila_newAns"
+            android:label="@string/title_activity_ask_dytila_new_ans"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.regular_order_user"
+            android:label="@string/title_activity_regular_order_user"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.changeAvatar"
+            android:label="@string/title_activity_change_avatar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.Order_details"
+            android:label="@string/title_activity_order_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.Ask_dytila_m_ques_ans"
+            android:label="@string/title_activity_ask_dytila_m_ques_ans"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.Juices"
+            android:label="@string/title_activity_juices"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.Forgot_password"
+            android:label="@string/title_activity_forgot_password"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.custom_meal_plans"
+            android:label="@string/title_activity_custom_meal_plans"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.CustomMealsHandler.customMealPlanDetail"
+            android:label="@string/title_activity_custom_meal_plan_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.How_to_Order_Meal"
+            android:label="@string/title_activity_how_to__order__meal"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.Dytila.gauravpc.dytilasp1.FavMeals"
+            android:label="@string/title_activity_fav_meals"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="4dp"
+    android:background="#fff"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ab0303"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/t2"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/t1"
+            android:textColor="#590404"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginLeft="45dp"
+            android:text="Dytila Kitchen found near you!"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t2"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:id="@+id/address"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:text="Address"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address"
+            android:text="Mobile : "
+            android:layout_toLeftOf="@+id/mobile"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address"
+            android:text="Mobile"
+            android:id="@+id/mobile"
+            android:textIsSelectable="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#fff"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLOSE"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:id="@+id/close"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:layout_below="@+id/address"/>
+
+    </RelativeLayout>
+</LinearLayout>

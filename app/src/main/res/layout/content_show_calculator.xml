@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:background="#efefef"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.Dytila.gauravpc.dytilasp1.showCalculator"
+    tools:showIn="@layout/activity_show_calculator">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            layout="@layout/toolbar_layout"
+            />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:contentPadding="20dp"
+
+                    card_view:cardElevation="0dp"
+                    card_view:cardCornerRadius="0dp"
+                    android:id="@+id/result"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Result : "
+                        android:id="@+id/result_text"
+                        android:gravity="center"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                    />
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cc"
+                    android:layout_margin="10dp"
+                    card_view:cardElevation="0dp"
+                    card_view:cardBackgroundColor="#efefef"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Calorie Calculator"
+                            android:gravity="center"
+                            android:id="@+id/head"
+                            android:textColor="#000"
+                            android:textSize="20dp"
+                            android:layout_margin="20dp"
+                            />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_below="@+id/head"
+                            android:id="@+id/genderRow">
+
+                            <RadioGroup
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/sexSelector">
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/head"
+                                    android:layout_margin="10dp"
+                                    android:text="Male"
+                                    android:id="@+id/maleRadioButton" />
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/head"
+                                    android:layout_margin="10dp"
+                                    android:text="Female"
+                                    android:id="@+id/femaleRadioButton"/>
+                            </RadioGroup>
+
+
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/genderRow"
+                            android:id="@+id/ageRow">
+
+                           <!--<TextView-->
+                               <!--android:layout_width="wrap_content"-->
+                               <!--android:layout_height="wrap_content"-->
+                               <!--android:text="Age : "-->
+                               <!--android:textColor="#000"-->
+                               <!--android:textSize="16dp"/>-->
+                            <Spinner
+                                android:id="@+id/age"
+                                android:layout_height="50dp"
+                                android:dropDownWidth="100dp"
+                                android:layout_width="wrap_content"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:prompt="@string/ageText">
+                            </Spinner>
+
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/ageRow"
+                            android:id="@+id/weightRow">
+
+                            <!--<TextView-->
+                                <!--android:layout_width="160dp"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="Weight (KGs)  : "-->
+                                <!--android:textColor="#000"-->
+                                <!--android:textSize="16dp"/>-->
+                            <Spinner
+                                android:id="@+id/weight"
+                                android:layout_height="50dp"
+                                android:layout_width="wrap_content"
+                                android:dropDownWidth="200dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:prompt="@string/weightText">
+
+                            </Spinner>
+
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/weightRow"
+                            android:id="@+id/heightRow">
+
+                            <!--<TextView-->
+                                <!--android:layout_width="160dp"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="Height (inches)  : "-->
+                                <!--android:textColor="#000"-->
+                                <!--android:textSize="16dp"/>-->
+                            <Spinner
+                                android:id="@+id/height"
+                                android:layout_height="50dp"
+                                android:dropDownWidth="150dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:prompt="@string/heightText">
+                            </Spinner>
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:gravity="center"
+                            android:layout_below="@+id/heightRow"
+                            android:id="@+id/exercise_levelRow">
+
+                            <!--<TextView-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="Exercise level  : "-->
+                                <!--android:textColor="#000"-->
+                                <!--android:id="@+id/exercise_levelText"-->
+                                <!--android:textSize="16dp"/>-->
+                            <Spinner
+                                android:dropDownWidth="wrap_content"
+                                android:layout_width="200dp"
+                                android:id="@+id/exercise_level"
+                                android:layout_height="50dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:prompt="@string/heightText"
+                                >
+
+                            </Spinner>
+                        </TableRow>
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_margin="30dp"
+                                android:id="@+id/ccsubmit"
+                                android:background="@drawable/shape"
+                                android:textColor="#fff"
+                                android:layout_below="@+id/exercise_levelRow"
+                                android:text="calculate"
+                                android:layout_height="wrap_content" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bmiCal"
+                    android:layout_margin="10dp"
+                    card_view:cardElevation="0dp"
+                    card_view:cardCornerRadius="0dp"
+                    card_view:cardBackgroundColor="#efefef"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="BMI Calculator"
+                            android:gravity="center"
+                            android:id="@+id/bmihead"
+                            android:textColor="#000"
+                            android:textSize="20dp"
+                            android:layout_margin="20dp"
+                            />
+
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/bmihead"
+                            android:id="@+id/bmiweightRow">
+
+                            <!--<TextView-->
+                            <!--android:layout_width="160dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="Weight (KGs)  : "-->
+                            <!--android:textColor="#000"-->
+                            <!--android:textSize="16dp"/>-->
+                            <Spinner
+                                android:id="@+id/bmiweight"
+                                android:layout_height="50dp"
+                                android:layout_width="wrap_content"
+                                android:dropDownWidth="200dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:prompt="@string/weightText">
+
+                            </Spinner>
+
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/bmiweightRow"
+                            android:id="@+id/bmiheightRow">
+
+                            <!--<TextView-->
+                            <!--android:layout_width="160dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="Height (inches)  : "-->
+                            <!--android:textColor="#000"-->
+                            <!--android:textSize="16dp"/>-->
+                            <Spinner
+                                android:id="@+id/bmiheight"
+                                android:layout_height="50dp"
+                                android:dropDownWidth="150dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:prompt="@string/heightText">
+                            </Spinner>
+                        </TableRow>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_margin="30dp"
+                            android:id="@+id/bmiSubmitButton"
+                            android:background="@drawable/shape"
+                            android:textColor="#fff"
+                            android:layout_below="@+id/bmiheightRow"
+                            android:text="calculate"
+                            android:layout_height="wrap_content" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+    <!-- Navigation drawer Layout-->
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:id="@+id/navigation_view"
+        android:background="#fff"
+        android:layout_gravity="start"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/navHeader">
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:padding="4dp"
+                android:src="@drawable/avatar"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="4dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="#000000"
+                android:id="@+id/userImg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dytila Nutrition"
+                android:textSize="12dp"
+                android:id="@+id/username"
+                android:textColor="#000"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@+id/userImg"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dytilanutrition@gmail.com"
+                android:textSize="10dp"
+                android:id="@+id/user_email"
+                android:textColor="#000"
+                android:layout_below="@+id/username"
+                android:layout_toRightOf="@+id/userImg"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="10dp"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/navHeader"
+            android:id="@+id/divider1"
+            android:background="@android:color/darker_gray"/>
+
+        <include
+            layout="@layout/navigation_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/options"
+            android:layout_below="@+id/divider1"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_above="@+id/footerText1"
+            android:id="@+id/divider2"
+            android:background="@android:color/darker_gray"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/divider2"
+            android:src="@drawable/logo_main2"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/logo"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© 2016 dytila | All Rights Reserved"
+            android:textColor="#000"
+            android:id="@+id/footerText1"
+            android:textSize="10sp"
+            android:layout_toRightOf="@+id/logo"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"/>
+
+
+    </RelativeLayout>
+
+
+
+</android.support.v4.widget.DrawerLayout>
