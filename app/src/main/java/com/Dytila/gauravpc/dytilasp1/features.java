@@ -438,7 +438,7 @@ public class features extends AppCompatActivity{
                 View parentView=getLayoutInflater().inflate(R.layout.bottomsheet_features, null);
 
 //                kitchenIcon=(ImageView)parentView.findViewById(R.id.kitchen_icon);
-                faqsIcon=(ImageView)parentView.findViewById(R.id.faqs_icon);
+                faqsIcon=(ImageView)parentView.findViewById(R.id.kitchens_icon);
                 feedbackIcon=(ImageView)parentView.findViewById(R.id.feedback_icon);
                 facebookIcon=(ImageView)parentView.findViewById(R.id.facebook_icon);
                 instaIcon=(ImageView)parentView.findViewById(R.id.instagram_icon);
@@ -496,8 +496,8 @@ public class features extends AppCompatActivity{
                 faqsIcon.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent=new Intent(features.this,feedback.class);
-                        intent.putExtra("value", "faqs");
+                        Intent intent=new Intent(features.this,kitchens.class);
+                        intent.putExtra("value", "kitchens");
                         startActivity(intent);
                     }
                 });

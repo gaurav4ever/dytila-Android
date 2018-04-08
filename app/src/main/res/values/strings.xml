@@ -96,4 +96,5 @@
     <string name="title_activity_custom_meal_plan_detail">customMealPlanDetail</string>
     <string name="title_activity_how_to__order__meal">How_to_Order_Meal</string>
     <string name="title_activity_fav_meals">FavMeals</string>
+    <string name="title_activity_kitchens">kitchens</string>
 </resources>

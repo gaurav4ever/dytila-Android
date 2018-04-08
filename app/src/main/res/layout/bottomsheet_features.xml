@@ -41,23 +41,23 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:id="@+id/faqs">
+                    android:id="@+id/kitchens">
                     <ImageView
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:src="@drawable/faqs_icon"
-                        android:id="@+id/faqs_icon"
+                        android:src="@drawable/kitchen_icon"
+                        android:id="@+id/kitchens_icon"
                         android:layout_centerHorizontal="true"
                         />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/faqs_icon"
+                        android:layout_below="@+id/kitchens_icon"
                         android:gravity="center"
                         android:textSize="10sp"
                         android:layout_marginTop="5dp"
                         android:textColor="#000"
-                        android:text="fAQs"/>
+                        android:text="Kitchens"/>
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="0dp"
