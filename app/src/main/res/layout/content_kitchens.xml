@@ -8,6 +8,28 @@
     tools:context="com.Dytila.gauravpc.dytilasp1.kitchens"
     tools:showIn="@layout/activity_kitchens">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:padding="20dp"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dytila Kitchens"
+            android:textSize="20sp"
+            android:textColor="#ffff"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/map"
+        android:layout_below="@+id/toolbar"
+        class="com.google.android.gms.maps.MapFragment"
+        android:name="com.Dytila.gauravpc.dytilasp1.kitchens"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </RelativeLayout>

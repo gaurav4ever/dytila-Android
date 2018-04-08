@@ -97,4 +97,5 @@
     <string name="title_activity_how_to__order__meal">How_to_Order_Meal</string>
     <string name="title_activity_fav_meals">FavMeals</string>
     <string name="title_activity_kitchens">kitchens</string>
+    <string name="title_activity_my_kitchens">Map</string>
 </resources>
