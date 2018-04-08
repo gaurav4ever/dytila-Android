@@ -1,5 +1,6 @@
 package com.Dytila.gauravpc.dytilasp1.models;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.Service;
 import android.content.Context;
@@ -15,6 +16,8 @@ import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
+
+import com.Dytila.gauravpc.dytilasp1.LocationTracking.GPSCallback;
 
 /**
  * Created by gaurav pc on 17-Jan-17.
@@ -34,14 +37,18 @@ public class MyLocListener extends Service implements LocationListener {
     double lang;
 
     private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 10;
-    private static final long MIN_TIME_BW_UPDATES = 1000 * 60 * 1;
+    private static final long MIN_TIME_BW_UPDATES = 5000;
 
     protected LocationManager locationManager;
-
+    private GPSCallback gpsCallback;
 
     public MyLocListener(Context context) {
         this.context = context;
         getLocation();
+    }
+
+    public void setGPSCallback(final GPSCallback gpsCallback) {
+        this.gpsCallback = gpsCallback;
     }
 
     public Location getLocation() {
@@ -57,10 +64,7 @@ public class MyLocListener extends Service implements LocationListener {
                 if (ActivityCompat.checkSelfPermission(context, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                     return null;
                 }
-                locationManager.requestLocationUpdates(
-                        LocationManager.NETWORK_PROVIDER,
-                        MIN_TIME_BW_UPDATES,
-                        MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
+                updateTime(MIN_TIME_BW_UPDATES);
 
             }
             if (locationManager != null) {
@@ -73,10 +77,7 @@ public class MyLocListener extends Service implements LocationListener {
         }
         if (isGPSEnabled) {
             if (location == null) {
-                locationManager.requestLocationUpdates(
-                        LocationManager.NETWORK_PROVIDER,
-                        MIN_TIME_BW_UPDATES,
-                        MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
+                updateTime(MIN_TIME_BW_UPDATES);
                 if (locationManager != null) {
                     location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
                     if (location != null) {
@@ -87,6 +88,16 @@ public class MyLocListener extends Service implements LocationListener {
             }
         }
         return location;
+    }
+
+    public void updateTime(long time) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        locationManager.requestLocationUpdates(
+                LocationManager.NETWORK_PROVIDER,
+                time,
+                MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
     }
 
     public void stopUsingGPS() {
@@ -138,7 +149,9 @@ public class MyLocListener extends Service implements LocationListener {
     @Override
     public void onLocationChanged(Location location) {
         if(location!=null){
-
+            if(gpsCallback!=null){
+                gpsCallback.onGPSUpdate(location);
+            }
             lat=location.getLatitude();
             lang=location.getLongitude();
             Log.e("Latitude : ", "" + location.getLatitude());

@@ -19,17 +19,17 @@
             android:layout_height="wrap_content"
             android:text="Dytila Kitchens"
             android:textSize="20sp"
+            android:id="@+id/textView"
             android:textColor="#ffff"
             android:textStyle="bold"
             />
     </RelativeLayout>
 
-    <RelativeLayout
+    <fragment
         android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_below="@+id/toolbar"
-        class="com.google.android.gms.maps.MapFragment"
-        android:name="com.Dytila.gauravpc.dytilasp1.kitchens"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 </RelativeLayout>
