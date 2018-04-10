@@ -714,7 +714,7 @@ public class features extends AppCompatActivity{
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    JSONArray parentArray=response.getJSONArray("Kitchens");
+                    JSONArray parentArray=response.getJSONArray("kitchens");
 
                     double dk_lat,dk_lang;
 

@@ -60,10 +60,13 @@ public class CustomLocationListener {
     Runnable mRunnable = new Runnable() {
         @Override
         public void run() {
-            latLng = kitchens.getLocation();
             sendDataToServer(latLng);
         }
     };
+
+    public void setLocation(LatLng location){
+        this.latLng = location;
+    }
 
     public void getLocation(){
        handler.postDelayed(mRunnable,delay);
@@ -80,11 +83,20 @@ public class CustomLocationListener {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        delay = speedTimeMapper.time;
-                        getLocation();
-                        Log.e(TAG,"data sent");
+                        JSONObject jsonObject= null;
+                        try {
+                            jsonObject = new JSONObject(response);
+                            String kitchenName=jsonObject.getString("status");
 
-                        sendNotification();
+                            delay = speedTimeMapper.time;
+                            getLocation();
+                            Log.e(TAG,response);
+
+                            sendNotification(kitchenName);
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -103,13 +115,13 @@ public class CustomLocationListener {
         requestQueue.add(stringRequest);
     }
 
-    private void sendNotification(){
+    private void sendNotification(String result){
 
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context)
                 .setSmallIcon(R.drawable.logo_small)
-                .setContentTitle("Dytila Kitchen found")
-                .setContentText("You are nearby a dytila  kitchen")
+                .setContentTitle("You are nearby a dytila  kitchen")
+                .setContentText(result)
                 .setAutoCancel(true)
                 .setSound(defaultSoundUri);
 

@@ -60,8 +60,8 @@ public class Kitchens extends FragmentActivity implements OnMapReadyCallback, Go
         myLocListener = new MyLocListener(Kitchens.this);
         myLocListener.setGPSCallback(this);
         if (myLocListener.canGetLocation()) {
-            myLat = myLocListener.getLat();
-            myLang = myLocListener.getLang();
+            latFinal = myLocListener.getLat();
+            langFinal = myLocListener.getLang();
         }
         speedTimeMapper = new SpeedTimeMapper(Kitchens.this, myLocListener);
         speedTimeMapper.setGPSCallback(this);
@@ -79,7 +79,7 @@ public class Kitchens extends FragmentActivity implements OnMapReadyCallback, Go
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         myMarker = mMap.addMarker(markerOptions);
-        updateLocationOnMap(myLat, myLang);
+        updateLocationOnMap(latFinal, langFinal);
     }
 
     @Override
@@ -101,6 +101,7 @@ public class Kitchens extends FragmentActivity implements OnMapReadyCallback, Go
 
     private void updateLocationOnMap(double lat, double lang) {
         LatLng p = new LatLng(lat, lang);
+        customLocationListener.setLocation(p);
         myMarker.setPosition(p);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(p));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(p, 16));
