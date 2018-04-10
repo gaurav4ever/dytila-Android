@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.Dytila.gauravpc.dytilasp1.kitchens">
+    tools:context="com.Dytila.gauravpc.dytilasp1.Kitchens"
+    android:fitsSystemWindows="true">
 
 
     <include layout="@layout/content_kitchens" />

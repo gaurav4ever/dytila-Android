@@ -3,15 +3,12 @@ package com.Dytila.gauravpc.dytilasp1;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
-import android.view.View;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.Dytila.gauravpc.dytilasp1.LocationTracking.CustomLocationListener;
 import com.Dytila.gauravpc.dytilasp1.LocationTracking.GPSCallback;
 import com.Dytila.gauravpc.dytilasp1.LocationTracking.SpeedTimeMapper;
 import com.Dytila.gauravpc.dytilasp1.models.MyLocListener;
@@ -19,7 +16,6 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
@@ -27,7 +23,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.math.BigDecimal;
 
-public class kitchens extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GPSCallback {
+public class Kitchens extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GPSCallback {
 
     private MyLocListener myLocListener;
     private double myLat;
@@ -36,10 +32,14 @@ public class kitchens extends FragmentActivity implements OnMapReadyCallback, Go
     private SpeedTimeMapper speedTimeMapper;
 
     private boolean isGPSEnabled;
-    float speed,currentSpeed,kmphSpeed;
+    float speed;
+    double currentSpeed, kmphSpeed;
     private TextView textView;
     private MarkerOptions markerOptions;
     private Marker myMarker;
+
+    private double latFinal, langFinal;
+    private CustomLocationListener customLocationListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,14 +49,6 @@ public class kitchens extends FragmentActivity implements OnMapReadyCallback, Go
 
         textView = (TextView) findViewById(R.id.textView);
 
-        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.toolbar);
-        relativeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "asdkabsd", Toast.LENGTH_SHORT).show();
-            }
-        });
-
         SupportMapFragment mapFragment = (SupportMapFragment) this.getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -64,15 +56,18 @@ public class kitchens extends FragmentActivity implements OnMapReadyCallback, Go
 
 
     private void initViews() {
-        markerOptions = new MarkerOptions().position(new LatLng(0,0)).icon(BitmapDescriptorFactory.fromResource(R.drawable.marker));
-        myLocListener = new MyLocListener(kitchens.this);
+        markerOptions = new MarkerOptions().position(new LatLng(0, 0)).icon(BitmapDescriptorFactory.fromResource(R.drawable.marker));
+        myLocListener = new MyLocListener(Kitchens.this);
         myLocListener.setGPSCallback(this);
         if (myLocListener.canGetLocation()) {
             myLat = myLocListener.getLat();
             myLang = myLocListener.getLang();
         }
-        speedTimeMapper = new SpeedTimeMapper(kitchens.this,myLocListener);
+        speedTimeMapper = new SpeedTimeMapper(Kitchens.this, myLocListener);
         speedTimeMapper.setGPSCallback(this);
+
+        customLocationListener = new CustomLocationListener(Kitchens.this, speedTimeMapper);
+        customLocationListener.getLocation();
     }
 
     @Override
@@ -84,31 +79,28 @@ public class kitchens extends FragmentActivity implements OnMapReadyCallback, Go
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         myMarker = mMap.addMarker(markerOptions);
-        updateLocationOnMap(myLat,myLang);
+        updateLocationOnMap(myLat, myLang);
     }
 
     @Override
     public void onGPSUpdate(Location location) {
-
-        if(location.hasSpeed()){
-            Toast.makeText(getApplicationContext(),"speed",Toast.LENGTH_SHORT).show();
-        }
-
         //update location on map
-        updateLocationOnMap(location.getLatitude(),location.getLongitude());
+        updateLocationOnMap(location.getLatitude(), location.getLongitude());
 
         speed = location.getSpeed();
-        textView.setText(location.getLatitude()+" "+location.getLongitude()+" speed: "+ speed);
+        latFinal = location.getLatitude();
+        langFinal = location.getLongitude();
 
-//        currentSpeed = round(speed,3, BigDecimal.ROUND_HALF_UP);
-//        kmphSpeed = round((currentSpeed*3.6),3,BigDecimal.ROUND_HALF_UP);
-        Toast.makeText(getApplicationContext(),""+kmphSpeed,Toast.LENGTH_LONG).show();
+        currentSpeed = round(speed, 3, BigDecimal.ROUND_HALF_UP);
+        kmphSpeed = round((currentSpeed * 3.6), 3, BigDecimal.ROUND_HALF_UP);
 
-        speedTimeMapper.findNextUpdateTime(speed);
+        textView.setText("Lat: " + location.getLatitude() + "\n Long: " + location.getLongitude() + "\nSpeed: " + kmphSpeed + "kmph");
+
+        speedTimeMapper.findNextUpdateTime(kmphSpeed);
     }
 
-    private void updateLocationOnMap(double lat, double lang){
-        LatLng p = new LatLng(lat,lang);
+    private void updateLocationOnMap(double lat, double lang) {
+        LatLng p = new LatLng(lat, lang);
         myMarker.setPosition(p);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(p));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(p, 16));
@@ -117,7 +109,7 @@ public class kitchens extends FragmentActivity implements OnMapReadyCallback, Go
             return;
         }
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
-        mMap.setMyLocationEnabled(true);
+        mMap.setMyLocationEnabled(false);
     }
 
     public static double round(double unrounded, int precision, int roundingMode) {
@@ -125,4 +117,16 @@ public class kitchens extends FragmentActivity implements OnMapReadyCallback, Go
         BigDecimal rounded = bd.setScale(precision, roundingMode);
         return rounded.doubleValue();
     }
+
+    public LatLng getLocation() {
+        return new LatLng(latFinal, langFinal);
+    }
+
+    @Override
+    public void onBackPressed() {
+        customLocationListener.stopHandler();
+        super.onBackPressed();
+    }
 }
+
+

@@ -487,7 +487,7 @@ public class features extends AppCompatActivity{
 //                                Intent intent = new Intent(features.this, places_kitchens.class);
 //                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                                intent.putExtra("type", "kitchens");
+//                                intent.putExtra("type", "Kitchens");
 //                                startActivity(intent);
 //                            }
 //                        }
@@ -496,8 +496,8 @@ public class features extends AppCompatActivity{
                 faqsIcon.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent=new Intent(features.this,kitchens.class);
-                        intent.putExtra("value", "kitchens");
+                        Intent intent=new Intent(features.this,Kitchens.class);
+                        intent.putExtra("value", "Kitchens");
                         startActivity(intent);
                     }
                 });
@@ -642,7 +642,7 @@ public class features extends AppCompatActivity{
     }
 
 
-    //functions to find nearest dytila kitchens
+    //functions to find nearest dytila Kitchens
     public void findDytilaKitchen(){
         if (ActivityCompat.checkSelfPermission(features.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
@@ -714,7 +714,7 @@ public class features extends AppCompatActivity{
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    JSONArray parentArray=response.getJSONArray("kitchens");
+                    JSONArray parentArray=response.getJSONArray("Kitchens");
 
                     double dk_lat,dk_lang;
 

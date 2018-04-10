@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.Dytila.gauravpc.dytilasp1.kitchens"
+    tools:context="com.Dytila.gauravpc.dytilasp1.Kitchens"
     tools:showIn="@layout/activity_kitchens">
 
     <RelativeLayout
@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Dytila Kitchens"
-            android:textSize="20sp"
+            android:textSize="12sp"
             android:id="@+id/textView"
             android:textColor="#ffff"
             android:textStyle="bold"

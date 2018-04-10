@@ -79,7 +79,7 @@ public class MyLocListener extends Service implements LocationListener {
             if (location == null) {
                 updateTime(MIN_TIME_BW_UPDATES);
                 if (locationManager != null) {
-                    location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+                    location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
                     if (location != null) {
                         lat = location.getLatitude();
                         lang = location.getLongitude();
@@ -91,11 +91,13 @@ public class MyLocListener extends Service implements LocationListener {
     }
 
     public void updateTime(long time) {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        locationManager.removeUpdates(MyLocListener.this);
+        locationManager = (LocationManager) context.getSystemService(LOCATION_SERVICE);
+        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
         locationManager.requestLocationUpdates(
-                LocationManager.NETWORK_PROVIDER,
+                LocationManager.GPS_PROVIDER,
                 time,
                 MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
     }
@@ -156,6 +158,7 @@ public class MyLocListener extends Service implements LocationListener {
             lang=location.getLongitude();
             Log.e("Latitude : ", "" + location.getLatitude());
             Log.e("Longitude : ",""+location.getLongitude());
+            Log.e("Speed : ",""+location.getSpeed());
         }
     }
 

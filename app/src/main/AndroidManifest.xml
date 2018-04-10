@@ -254,7 +254,7 @@
             android:label="@string/title_activity_fav_meals"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".kitchens"
+            android:name=".Kitchens"
             android:label="@string/title_activity_kitchens"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
